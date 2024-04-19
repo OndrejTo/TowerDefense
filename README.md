@@ -23,12 +23,10 @@ Hráč bude hru ovládat pomocí myši, kde klikáním na herní plochu umisťuj
 
 **Nepřátelské jednotky:** Různé typy nepřátelských jednotek, každá s vlastními schopnostmi a zranitelnostmi.
 
-
-
 **Pravidla pohybu aktérů:**
 
-Nepřátelské jednotky se objevují na určených místech na mapě a postupují směrem k pevnosti hráče.
-Každá jednotka má svou vlastní trasu pohybu, kterou musí dodržovat.
+Nepřátelské jednotky se objevují na začátku trasy na mapě a postupují směrem k pevnosti hráče.
+Každá jednotka má stejnou trasu pohybu, kterou musí dodržovat.
 Nepřátelské jednotky se pohybují určitou rychlostí a mají různou odolnost vůči útokům.
 
 ## Cíl hry: 
