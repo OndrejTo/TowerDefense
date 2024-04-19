@@ -5,7 +5,7 @@
 ### Autoři: Ondřej Tomašťík, Marek Reich, Oliver Šesták
 
 ---
-*Programovací projekt I. ročníku, Obchodní akademie Uherské Hradiště*
+*Projekt v rámci Programování I. ročník, Obchodní akademie Uherské Hradiště*
 ***
 
 **Motto**: "Stavte obranné věže a ubráníte naši pevnost!"
