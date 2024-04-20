@@ -10,14 +10,12 @@ public class Tower1 extends Actor
 {
     public Tower1() 
     {
-        GreenfootImage image = getImage();
-        image.scale(50, 50);
-        setImage(image);
     }
 
     public void act()
     {
         shoot();
+        mouse();
     }
 
     private void shoot() 
@@ -26,8 +24,19 @@ public class Tower1 extends Actor
             String key = Greenfoot.getKey();
             if ("space".equals(key)) 
             {
-                getWorld().addObject(new Shot(), getX(), getY());
+                Shot shot = new Shot();
+                getWorld().addObject(shot, getX(), getY());
+                shot.setRotation(this.getRotation());
             }
+        }
+    }
+
+    private void mouse() 
+    {
+        MouseInfo mouseinfo = Greenfoot.getMouseInfo();
+        if (mouseinfo != null)
+        {
+            turnTowards(mouseinfo.getX(), mouseinfo.getY());
         }
     }
 }
