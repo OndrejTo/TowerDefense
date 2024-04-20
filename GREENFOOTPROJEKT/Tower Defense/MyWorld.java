@@ -8,16 +8,42 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private int spawncycle = 30;
+    private LifeCounter lcount;
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
-        addObject(new Shot(), getWidth()/2-100, getHeight()/2);
+        // Svět, counter a věci
+        super(800, 600, 1);
         addObject(new Tower1(), getWidth()/2, getHeight()/2);
+        addObject(new BasicEnemy(), 10, getHeight()/2-80);
+        lcount = new LifeCounter();
+        addObject(lcount, 84, 20);
+    }
+    
+    public void act() 
+    {
+        /**
+         *  Cykl spawnování nepřátel (teď 0.5s)
+         */
+        
+        spawncycle--;
+        if (spawncycle <= 0) 
+        {
+            spawncycle = 30;
+            addObject(new BasicEnemy(), 10, getHeight()/2-80);
+        }
+    }
+    
+    /**
+     *  Vrátí aktuální stav countru.
+     */
+    
+    public LifeCounter getCounter()
+    {
+        return lcount;
     }
 }

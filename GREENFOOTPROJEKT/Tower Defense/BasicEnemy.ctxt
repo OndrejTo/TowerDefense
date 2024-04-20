@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BasicEnemy
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ BasicEnemy\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ BasicEnemy\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ getRekt()
+comment2.text=\r\n\ \ Sn\u00ED\u017E\u00ED\ po\u010Det\ \u017Eivot\u016F\ o\ 1,\ kdy\u017E\ se\ dotkne\ strany\ sv\u011Bta.\ (zat\u00EDm\ to\ bude\ sta\u010Dit)\r\n
+numComments=3

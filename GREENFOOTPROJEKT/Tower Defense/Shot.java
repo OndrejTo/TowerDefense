@@ -10,16 +10,23 @@ public class Shot extends Actor
 {
     public Shot() 
     {
-        GreenfootImage image = getImage();
-        image.scale(10, 20);
-        setImage(image);
     }
+
     public void act()
     {
-        if (isAtEdge()) 
+        if (isTouching(BasicEnemy.class)) 
         {
-        getWorld().removeObject(this);
+            // zatím to tak mám
+            removeTouching(BasicEnemy.class);
+            getWorld().removeObject(this);
         }
-        else setLocation(getX(), getY()-10);
+        else if (isAtEdge()) 
+        {
+            getWorld().removeObject(this);
+        }
+        else {
+            move(10);
+        }
     }
 }
+
