@@ -1,16 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class BasicEnemy here.
+ * Write a description of class FastEnemy here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BasicEnemy extends Actor
+public class FastEnemy extends Actor
 {
     private int pathTimer;
     /**
-     * Act - do whatever the BasicEnemy wants to do. This method is called whenever
+     * Act - do whatever the FastEnemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
@@ -19,7 +19,7 @@ public class BasicEnemy extends Actor
         // pathFinder2(); 
         // nevím jak udělat pronásledování trasy, obě varianty jsou na hovno, ale nějak to vyřešíme lol
         // zatím tu bude:
-        move(1);
+        move(3);
         if (isAtEdge()) 
         {
             getRekt();
@@ -28,7 +28,7 @@ public class BasicEnemy extends Actor
     }
 
     /**
-     *  Sníží počet životů o 1, když se dotkne strany světa. (zatím to bude stačit)
+     *  Sníží pocet životů o 1, když se dotkne strany světa. (zatím to bude stacit)
      */    
     private void getRekt()
     {
