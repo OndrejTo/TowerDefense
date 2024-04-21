@@ -2,8 +2,6 @@
 
 # Greenfoot Tower Defense
 
-___
-
 ## Autoři: 
 
 - Ondřej Tomašťík
