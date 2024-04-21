@@ -18,7 +18,12 @@ public class LifeCounter extends Actor
     {
         setImage(new GreenfootImage("Lives: 10", 50, Color.WHITE, Color.BLACK));
     }
-
+    
+    public void act() 
+    {
+        if (lives <= 0) Greenfoot.stop();
+    }
+    
     /**
      *  Mění počet v countru (zkopčil jsem to z tutoriálu xD)
      */
