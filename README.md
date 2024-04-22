@@ -109,10 +109,10 @@ Při zničení generuje hráči 10 až 20 mincí.
 
 | Typ balónku | Počet životů | Poškození | Rychlost | Zisk |
 |:-:|:-:|:-:|:-:|:-:|
-| Červený | 5 | 1 | 1/krok | 1-3 |
-| Modrý  | 10 | 1 | 1/krok | 2-4 |
-| Růžový | 20 | 2 | 3/krok | 5-8 |
-| Vzducholoď | 100 | 5 | 1/krok | 10-20 |
+| Červený | 5 | 1 | 1 px/krok | 1-3 |
+| Modrý  | 10 | 1 | 1 px/krok | 2-4 |
+| Růžový | 20 | 2 | 3 px/krok | 5-8 |
+| Vzducholoď | 100 | 5 | 1 px/krok | 10-20 |
 
 ### Schopnosti
 
