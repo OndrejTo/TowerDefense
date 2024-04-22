@@ -27,7 +27,7 @@ Hráč bude hru ovládat pomocí myši, kde klikáním na herní plochu umísťu
 ## Aktéři
 
 ### Obranné věže
-Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na strategických pozicích po celé mapě, které slouží k ochraně proti nepřátelským útokům. Každá obranná věž má své vlastnosti a schopnosti, které hráč může využít k efektivní obraně pevnosti.
+Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na strategických pozicích po celé mapě, které slouží k ochraně proti nepřátelským útokům. Každá obranná věž má své vlastnosti a schopnosti, které hráč může využít k efektivní obraně pevnosti. Pomocí mincí (herní měny) může hráč každou věž až dvakrát vylepšit pro vylepšení dosavadních atributů. 
 
 #### Typy věží
 
@@ -73,19 +73,29 @@ Ve hře jsou různé typy nepřátelských jednotek, každá s vlastními rychlo
 - **Červený balónek**  
 
 Tento balónek je pomalý (pohybuje se rychlostí jeden pixel za krok hry) a nejméně odolný (má jen 5 životů), ale vyskytuje se nejčastěji.
+Při zničení generuje hráči 1 až 3 mince.
 
 - **Modrý balónek**  
 
 Tento balónek je více odolný proti útokům (má více životů - 10 životů), ale je stejně pomalý jako červený balónek.
+Při zničení generuje hráči 2 až 4 mince.
 
 - **Růžový balónek**  
 
 Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry) a velmi odolný (má 20 životů) oproti modrému a červenému balónku.
+Při zničení generuje hráči 5 až 8 mincí.
 
 - **Vzducholoď**  
 
 Tato vzducholoď je nejnebezpečnější nepřátel ve hře. Má největší poškození (ubere 5 životů) a vydrží velmi dlouho (má 100 životů).
 Je určena pro poslední vlny hry.
+Při zničení generuje hráči 10 až 20 mincí.
+
+	| Typ balónku | Počet životů | Poškození | Působiště |
+	|    :-:   |    :-:   |    :-:   |  :-:   |
+	| 1 | 75 | 4/s | 50 px | 
+	| 2 | 125 | 8/s | 75 px |
+	| 3 | 200 | 12/s | 100 px |
 
 ### Schopnosti:
 
@@ -103,9 +113,14 @@ Hráč může vyvolat schopnost jednou za 3600 kol (60 sekund) hry a při použi
 
 - **Lepidlová louže**  
 
-Hráč umístí do hracího pole kruh symbolizující lepidlo, který spomalí všechny nepřátele kolidující s kruhem.
+Hráč umístí do hracího pole kruh symbolizující lepidlo, který zpomalí všechny nepřátele kolidující s kruhem.
 Hráč může vyvolat schopnost jednou za 1800 kol (30 sekund) hry a při použití se mu odečte 75 mincí (pokud má).
+
+### Ekonomika hry:
+
+Pro používání aktérů je ve hře obsažen systém mincí sloužící k přidávání věží, jejich vylepšování a používání schopností.
+Hráč na začátku hry obdrží startovací kredit ve výši 100 mincí.
 
 ## Cíl hry
 
-Hra končí, když hráč úspěšně ubrání pevnost po určeném počtu vln nebo se balónky přes obranu pevnosti probourají. Výsledek hráče se vyhodnotí na základě toho, kolik vln nepřátel hráč zastavil a kolik poškození pevnosti utrpěl.
+Hra končí, když hráč úspěšně ubrání pevnost po určeném počtu vln nebo se balónky přes obranu pevnosti proplíží. Výsledek hráče se vyhodnotí na základě toho, kolik vln nepřátel hráč zastavil a kolik poškození pevnost utrpěla.
