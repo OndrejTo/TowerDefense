@@ -14,7 +14,7 @@
 
 ## Téma
  
-Hra se odehrává v okolí tvrze, kde hráč brání svou pevnost před útoky nepřátelských sil (balónků). Jednotlivé prvky reprezentují různé typy obranných věží, které hráč může stavět, a nepřátelské jednotky, které se snaží prolomit obranu, dále se ve hře nacházejí schopnosti, které hráč využívá pro zničení či spomalení balónků.
+Hra se odehrává v okolí tvrze, kde hráč brání svou pevnost před útoky nepřátelských sil (balónků). Jednotlivé prvky reprezentují různé typy obranných věží, které hráč může stavět, a nepřátelské jednotky, které se snaží prolomit obranu, dále se ve hře nacházejí schopnosti, které hráč využívá pro zničení či zpomalení balónků.
 
 ## Úkol hráče
  
