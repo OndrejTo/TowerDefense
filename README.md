@@ -91,12 +91,12 @@ a finanční požadavek (pro aktivace schopnosti je potřeba uhradit předem sta
 
 #### Typy schopností:
 
--**Padající meteority:**
+- **Padající meteority:**
 Spustí se vlna 15 padajících meteoritů pohybujících se vertikálně od horního okraje rychlostí 3 pixely za jeden krok.
 Pokud se některý z meteoritů dotkne nepřítele, sebere mu 50 životů a zmizí. 
 Hráč může vyvolat schopnost jednou za 3600 kol (60 sekund) hry a při použití se mu odečte 150 mincí (pokud má).
 
--**Lepidlová louže:**
+- **Lepidlová louže:**
 Hráč umístí do hracího pole kruh symbolizující lepidlo, který spomalí všechny nepřátele kolidující s kruhem.
 Hráč může vyvolat schopnost jednou za 1800 kol (30 sekund) hry a při použití se mu odečte 75 mincí (pokud má).
 
