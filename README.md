@@ -33,6 +33,8 @@ Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na s
 
 - **Střelecká věž**  
 
+	![](BasicTurretTiers.png)
+
 	Tato věž má malé poškození (zabije jen jednoho nepřátele), ale má rychlou palbu (střílí jednou za 30 kol) a je velmi účinná proti slabším nepřátelům. Je vhodná k útoku na zbytky nepřátelských jednotek na konci mapy. Na pořízení této věže potřebujeme 35 mincí.
 
 	| Úroveň | Cena vylepšení | Poškození | Rozsah | Kadence |
@@ -42,7 +44,9 @@ Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na s
 	| 3 | 100 | 8 | 100 px | 1/30 kol |
 
 - **Dělo**  
-
+	
+	![](CannonTiers.png)
+	
 	Dělo je specializováno na ničení skupin nepřátel a obranu proti větším hrozbám. Systém dělových koulí může způsobit rozsáhlé poškození většímu množství nepřátelských jednotek najednou. Na pořízení této věže potřebujeme 50 mincí.
 
 	| Úroveň | Cena vylepšení | Poškození | Rozsah | Kadence |
@@ -52,6 +56,8 @@ Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na s
 	| 3 | 150 | 10 | 80 px | 1/60 kol  |
 
 - **Elektrická věž**  
+
+	![](ElectricTowerTiers.png)
 
 	Tato věž vytvoří eletrické pole v nejbližším okolím a poškodí všechny nepřátelské jednotky, které se v poli nachází. Na pořízení této věže potřebujeme 75 mincí.
 
@@ -72,6 +78,8 @@ Ve hře jsou různé typy nepřátelských jednotek, každá s vlastními rychlo
 
 - **Červený balónek**  
 
+	![](balloon1.png)
+
 	Tento balónek je pomalý (pohybuje se rychlostí jeden pixel za krok hry) a nejméně odolný (má jen 5 životů), ale vyskytuje se nejčastěji.
 Při zničení generuje hráči 1 až 3 mince.
 
@@ -81,6 +89,8 @@ Při zničení generuje hráči 1 až 3 mince.
 Při zničení generuje hráči 2 až 4 mince.
 
 - **Růžový balónek**  
+
+	![](fastenemy.png)
 
 	Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry) a velmi odolný (má 20 životů) oproti modrému a červenému balónku.
 Při zničení generuje hráči 5 až 8 mincí.
