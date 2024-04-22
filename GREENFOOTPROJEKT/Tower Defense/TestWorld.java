@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TestWorld extends World
 {
-    private int spawncycle = 30;
+    private int spawncycle = 60;
     private LifeCounter lcount;
     /**
      * Constructor for objects of class MyWorld.
@@ -17,7 +17,7 @@ public class TestWorld extends World
     public TestWorld()
     {    
         // Svět, counter a věci
-        super(800, 600, 1);
+        super(900, 600, 1);
         addObject(new Cannon(), getWidth()/2-100, getHeight()/2-100);
         addObject(new Turret(), getWidth()/2+100, getHeight()/2+100);
         lcount = new LifeCounter();
@@ -31,7 +31,7 @@ public class TestWorld extends World
          */
         
         spawncycle--;
-        if (spawncycle == 15) 
+        if (spawncycle == 30) 
         {
             addObject(new BasicEnemy(), 10, getHeight()/2);
         }
