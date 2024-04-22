@@ -94,7 +94,7 @@ Při zničení generuje hráči 2 až 4 mince.
 
 	![](ZadaniObrazky/fastenemy.png)
 
-	Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry) a velmi odolný (má 20 životů) oproti modrému a červenému balónku.
+	Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry), velmi odolný (má 20 životů) oproti modrému a červenému balónku a ubere hráči 2 životy..
 Při zničení generuje hráči 5 až 8 mincí.
 
 - **Vzducholoď**  
@@ -105,11 +105,14 @@ Při zničení generuje hráči 5 až 8 mincí.
 Je určena pro poslední vlny hry.
 Při zničení generuje hráči 10 až 20 mincí.
 
-	| Typ balónku | Počet životů | Poškození | Působiště |
-	|:-:|:-:|:-:|:-:|
-	| 1 | 75 | 4/s | 50 px | 
-	| 2 | 125 | 8/s | 75 px |
-	| 3 | 200 | 12/s | 100 px |
+#### Přehled balónků
+
+| Typ balónku | Počet životů | Poškození | Zisk |
+|:-:|:-:|:-:|:-:|
+| Červený | 5 | 1 | 1-3 |
+| Modrý  | 10 | 1 | 2-4 |
+| Růžový | 20 | 2 | 5-8 |
+| Vzducholoď | 100 | 5 | 10-20 |
 
 ### Schopnosti
 
