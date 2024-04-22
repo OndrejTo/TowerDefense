@@ -14,7 +14,7 @@
 
 ## Téma:
  
-Hra se odehrává v moderním světě, kde hráč brání svou pevnost před útoky nepřátelských sil. Jednotlivé prvky reprezentují různé typy obranných věží, které hráč může stavět, a nepřátelské jednotky, které se snaží prolomit obranu.
+Hra se odehrává v moderní světě, kde hráč brání svou pevnost před útoky nepřátelských sil (balónků). Jednotlivé prvky reprezentují různé typy obranných věží, které hráč může stavět, a vlny nepřátelských jednotek, které se snaží prolomit obranu.
 
 ## Úkol hráče:
  
@@ -34,7 +34,7 @@ Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na s
 - **Střelecká věž:**  
 Tato věž je slabá, ale má velmi rychlou palbu a je velmi účinná proti slabším nepřátelům. Je vhodná k útoku na zbytky nepřátelských jednotek na konci mapy.
 
-- **Kanón:**  
+- **Dělo:**  
 Kanón je specializovaný na ničení skupin nepřátel a obranu proti větším hrozbám. Systém kanónových koulí může způsobit rozsáhlé poškození většímu množství nepřátelských jednotek najednou.
 
 - **DOPLNIT**  
@@ -44,10 +44,26 @@ Lorem ipsum.
 Lorem ipsum.
 
 ### Nepřátelské jednotky (DOPLNIT):
-Různé typy nepřátelských jednotek, každá s vlastními schopnostmi a zranitelnostmi.  
-Nepřátelské jednotky se objevují na začátku trasy na mapě a postupují směrem k pevnosti hráče.
+Nepřátelské jednotky se objevují na začátku trasy na mapě a postupují směrem k pevnosti hráče.  
 Každá jednotka má stejnou trasu pohybu, kterou musí dodržovat.
-Nepřátelské jednotky se pohybují určitou rychlostí a mají různou odolnost vůči útokům.
+Nepřátelské jednotky se pohybují určitou rychlostí a mají různou odolnost vůči útokům.  
+Ve hře jsou různé typy nepřátelských jednotek, každá s vlastními schopnostmi a zranitelnostmi.  
+
+#### Typy nepřátelských jednotek:
+
+- **Červený balónek:**  
+Tento balónek je pomalý (pohybuje se rychlostí jeden pixel za krok hry) a nejméně odolný (má jen jeden život), ale může vám projít skrz vaše obrany, jestli nejste opatrný.
+
+- **Modrý balónek:**  
+Tento balónek je více odolný proti útokům (má více životů - dva životy), ale je stejně pomalý jako červený balónek.
+
+- **Růžový balónek:**  
+Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry) a velmi odolný (má tři životy) oproti modrému a červenému balónku.
+
+- **Vzducholoď**  
+Tato vzducholoď je nejkrutější nepřátel ve hře. Má největší poškození (ubere 5 životů) a vydrží velmi dlouho (má 100 životů).
+Je určena pro poslední vlny hry.
+
 
 ## Cíl hry: 
-Hra končí, když hráč úspěšně ubrání pevnost a nepřátelské jednotky jsou zničeny nebo odraženy. Výsledek hráče se vyhodnotí na základě toho, kolik vln nepřátel hráč zastavil a kolik poškození pevnosti utrpěl.
+Hra končí, když hráč úspěšně ubrání pevnost po určeném počtu vlnách nebo se jednotky probourají přes obranu pevnosti. Výsledek hráče se vyhodnotí na základě toho, kolik vln nepřátel hráč zastavil a kolik poškození pevnosti utrpěl.
