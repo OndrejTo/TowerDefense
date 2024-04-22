@@ -21,7 +21,11 @@ public class LifeCounter extends Actor
     
     public void act() 
     {
-        if (lives <= 0) Greenfoot.stop();
+        if (lives <= 0) 
+        {
+            lives = 10;
+            Greenfoot.stop();
+        }
     }
     
     /**
