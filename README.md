@@ -85,6 +85,8 @@ Při zničení generuje hráči 1 až 3 mince.
 
 - **Modrý balónek**  
 
+	![](ZadaniObrazky/BlueEnemy.png)
+
 	Tento balónek je více odolný proti útokům (má více životů - 10 životů), ale je stejně pomalý jako červený balónek.
 Při zničení generuje hráči 2 až 4 mince.
 
@@ -97,6 +99,8 @@ Při zničení generuje hráči 5 až 8 mincí.
 
 - **Vzducholoď**  
 
+	![](ZadaniObrazky/Airship1.png)
+	
 	Tato vzducholoď je nejnebezpečnější nepřátel ve hře. Má největší poškození (ubere 5 životů) a vydrží velmi dlouho (má 100 životů).
 Je určena pro poslední vlny hry.
 Při zničení generuje hráči 10 až 20 mincí.
@@ -117,11 +121,15 @@ a finanční požadavek (pro aktivace schopnosti je potřeba uhradit předem sta
 
 - **Padající meteority**  
 
+	![](ZadaniObrazky/Meteorite.png)
+
 	Spustí se vlna 15 padajících meteoritů pohybujících se vertikálně od horního okraje rychlostí 3 pixely za jeden krok.
 Pokud se některý z meteoritů dotkne nepřítele, sebere mu 50 životů a zmizí. 
 Hráč může vyvolat schopnost jednou za 3600 kol (60 sekund) hry a při použití se mu odečte 150 mincí (pokud má).
 
 - **Lepidlová louže**  
+
+	![](ZadaniObrazky/Glue.png)
 
 	Hráč umístí do hracího pole kruh symbolizující lepidlo, který zpomalí všechny nepřátele kolidující s kruhem.
 Hráč může vyvolat schopnost jednou za 1800 kol (30 sekund) hry a při použití se mu odečte 75 mincí (pokud má).
