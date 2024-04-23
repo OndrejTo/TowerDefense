@@ -94,7 +94,7 @@ Při zničení generuje hráči 2 až 4 mince.
 
 	![](ZadaniObrazky/fastenemy.png)
 
-	Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry), velmi odolný (má 20 životů) oproti modrému a červenému balónku a ubere hráči 2 životy..
+	Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry), velmi odolný (má 20 životů) oproti modrému a červenému balónku a ubere hráči 2 životy.
 Při zničení generuje hráči 5 až 8 mincí.
 
 - **Vzducholoď**  
@@ -116,7 +116,7 @@ Při zničení generuje hráči 10 až 20 mincí.
 
 ### Schopnosti
 
-Kromě stavby věží a vylepšování věží může hráč také používat schopnosti (ability) pro ovlivnění průběhu hry pro svůj prospěch.
+Kromě stavby věží a vylepšování věží může hráč také používat schopnosti (ability) pro ovlivnění průběhu hry ve svůj prospěch.
 Pro použití schopnosti musí hráč splnit následující podmínky: je splněn časový požadavek (schopnosti můžeme použít pouze jednou za určitý čas)
 a finanční požadavek (pro aktivace schopnosti je potřeba uhradit předem stanovenou sumu mincí)
 
