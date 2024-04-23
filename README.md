@@ -14,7 +14,7 @@
 
 ## Téma
  
-Hra se odehrává v okolí tvrze, kde hráč brání svou pevnost před útoky nepřátelských sil (balónků). Jednotlivé prvky reprezentují různé typy obranných věží, které hráč může stavět, a nepřátelské jednotky, které se snaží prolomit obranu, dále se ve hře nacházejí schopnosti, které hráč využívá pro zničení či spomalení balónků.
+Hra se odehrává v okolí tvrze, kde hráč brání svou pevnost před útoky nepřátelských sil (balónků). Jednotlivé prvky reprezentují různé typy obranných věží, které hráč může stavět, a nepřátelské jednotky, které se snaží prolomit obranu, dále se ve hře nacházejí schopnosti, které hráč využívá pro zničení či zpomalení balónků.
 
 ## Úkol hráče
  
@@ -95,7 +95,7 @@ Při zničení generuje hráči 2 až 4 mince.
 
 	![](ZadaniObrazky/fastenemy.png)
 
-	Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry), velmi odolný (má 20 životů) oproti modrému a červenému balónku a ubere hráči 2 životy..
+	Tento balónek je velmi rychlý (pohybuje se rychlostí tří pixelů za krok hry), velmi odolný (má 20 životů) oproti modrému a červenému balónku a ubere hráči 2 životy.
 Při zničení generuje hráči 5 až 8 mincí.
 
 - **Vzducholoď**  
@@ -117,7 +117,7 @@ Při zničení generuje hráči 10 až 20 mincí.
 
 ### Schopnosti
 
-Kromě stavby věží a vylepšování věží může hráč také používat schopnosti (ability) pro ovlivnění průběhu hry pro svůj prospěch.
+Kromě stavby věží a vylepšování věží může hráč také používat schopnosti (ability) pro ovlivnění průběhu hry ve svůj prospěch.
 Pro použití schopnosti musí hráč splnit následující podmínky: je splněn časový požadavek (schopnosti můžeme použít pouze jednou za určitý čas)
 a finanční požadavek (pro aktivace schopnosti je potřeba uhradit předem stanovenou sumu mincí)
 
