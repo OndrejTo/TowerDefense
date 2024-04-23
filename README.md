@@ -27,7 +27,7 @@ Hráč bude hru ovládat pomocí myši, kde klikáním na herní plochu umísťu
 ## Aktéři
 
 ### Obranné věže
-Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na strategických pozicích po celé mapě, které slouží k ochraně proti nepřátelským útokům. Každá obranná věž má své vlastnosti a schopnosti, které hráč může využít k efektivní obraně pevnosti. Pomocí mincí (herní měny) může hráč každou věž až dvakrát vylepšit pro vylepšení dosavadních atributů. 
+Obranné věže jsou klíčovými prvky ve hře, které můžeme umísťovat na určené pole. Jsou to stavby umístěné na strategických pozicích po celé mapě, které slouží k ochraně proti nepřátelským útokům. Každá obranná věž má své vlastnosti a schopnosti, které hráč může využít k efektivní obraně pevnosti. Pomocí mincí (herní měny) může hráč každou věž až dvakrát vylepšit pro vylepšení dosavadních atributů. 
 
 #### Typy věží
 
@@ -66,6 +66,7 @@ Obranné věže jsou klíčovými prvky ve hře. Jsou to stavby umístěné na s
 	| 1 | 75 | 4/s | 50 px | 
 	| 2 | 125 | 8/s | 75 px |
 	| 3 | 200 | 12/s | 100 px |
+	
 
 ### Nepřátelské jednotky
 
