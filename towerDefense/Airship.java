@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Airship extends Enemy
 {
-    private int lifes = 100;
+    private int lifes=100;
     private int minReward = 10;
     private int maxReward = 20;
     public void act()
