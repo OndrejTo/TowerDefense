@@ -11,6 +11,7 @@ public class PinkEnemy extends Enemy
     public int lifes = 20;
     private int minReward = 5;
     private int maxReward = 8;
+    private FireBall lastFireBall;
     public void act()
     {
         MouseInfo mi = Greenfoot.getMouseInfo();
@@ -18,7 +19,12 @@ public class PinkEnemy extends Enemy
         {
             setLocation(mi.getX(), mi.getY());
         }
-        lifes -= colision();
+        DamageContainer damageContainer = colision(this, lastFireBall);
+        if (damageContainer != null)
+        {
+            lifes -= damageContainer.damage;
+            lastFireBall = damageContainer.lastFireBall;
+        }
         destruction(this, lifes, minReward, maxReward);
     }
 }

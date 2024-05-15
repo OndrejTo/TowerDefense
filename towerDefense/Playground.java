@@ -8,11 +8,29 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Playground extends World
 {
-    public int coins = 100;
+    public int coins = 1000;
+    private int meteoriteCounter = 450;
+    private boolean startMeteoriteAtack;
     public Playground()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 700, 1); 
+    }
+    
+    public void act()
+    {
+        if(startMeteoriteAtack)
+        {
+            if(meteoriteCounter % 30 == 0 )
+            {
+                addObject(new Meteorite(), Greenfoot.getRandomNumber(getWidth()-100)+50, 1);
+            }
+            meteoriteCounter--;
+            if(meteoriteCounter == 0)
+            {
+                startMeteoriteAtack = false;
+                meteoriteCounter = 450;
+            }
+        }
     }
     
     public void towerWasCreated(Tower tower, int cost)
@@ -37,6 +55,15 @@ public class Playground extends World
         else
         {
             return false;
+        }
+    }
+    
+    public void meteoritAtack(MeteoriteIcon meteoriteIcon)
+    {
+        if(coins >= 150 && meteoriteCounter > 0)
+        {
+            coins -= 150;
+            startMeteoriteAtack = true;
         }
     }
 }

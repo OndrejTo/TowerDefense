@@ -8,9 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Airship extends Enemy
 {
-    private int lifes=100;
+    private int lifes = 100;
     private int minReward = 10;
     private int maxReward = 20;
+    private FireBall lastFireBall;
     public void act()
     {
         MouseInfo mi = Greenfoot.getMouseInfo();
@@ -18,7 +19,12 @@ public class Airship extends Enemy
         {
             setLocation(mi.getX(), mi.getY());
         }
-        lifes -= colision();
+        DamageContainer damageContainer = colision(this, lastFireBall);
+        if (damageContainer != null)
+        {
+            lifes -= damageContainer.damage;
+            lastFireBall = damageContainer.lastFireBall;
+        }
         destruction(this, lifes, minReward, maxReward);
     }
 }

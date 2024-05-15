@@ -34,7 +34,7 @@ public class Tower extends Actor
         return false;
     }
     
-    public InfoContainer upgrade(Tower tower,GreenfootImage level1,
+    public LevelContainer upgrade(Tower tower,GreenfootImage level1,
     GreenfootImage level2, GreenfootImage level3, GreenfootImage currentImage,
     int damageLevel2,int damageLevel3, int level2Cost, int level3Cost)
     {
@@ -45,7 +45,8 @@ public class Tower extends Actor
             {
                 tower.setImage(level2);
                 currentImage = level2;
-                return new InfoContainer(currentImage, damageLevel2);
+                removeTouching(UpgradeWrench.class);
+                return new LevelContainer(currentImage, damageLevel2);
             }
             removeTouching(UpgradeWrench.class);
         }
@@ -57,7 +58,8 @@ public class Tower extends Actor
             {
                 tower.setImage(level3);
                 currentImage = level3;
-                return new InfoContainer(currentImage, damageLevel3);
+                removeTouching(UpgradeWrench.class);
+                return new LevelContainer(currentImage, damageLevel3);
             }
             removeTouching(UpgradeWrench.class);
         }

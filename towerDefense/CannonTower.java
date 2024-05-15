@@ -9,17 +9,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CannonTower extends Tower
 {
     public boolean startPosition = true;
-    private int cooldown = 30;
+    private int cooldown = 60;
     GreenfootImage level1 = new GreenfootImage("CannonLevel1.png");
     GreenfootImage level2 = new GreenfootImage("CannonLevel2.png");
     GreenfootImage level3 = new GreenfootImage("CannonLevel3.png");
     GreenfootImage currentImage = level1;
     private int currentDamage = 3;
     private int damageLevel2 = 5;
-    private int damageLevel3 = 8;
-    private int level2Cost = 50;
-    private int level3Cost = 100;
-    private InfoContainer infoContainer;
+    private int damageLevel3 = 10;
+    private int level2Cost = 100;
+    private int level3Cost = 150;
+    private LevelContainer levelContainer;
     /*public ShootingTower()
     {
         startPosition(startPosition, this);
@@ -51,21 +51,21 @@ public class CannonTower extends Tower
         cooldown--;
         if (!getWorld().getObjects(Enemy.class).isEmpty() && cooldown <= 0) {
             cooldown = 60;
-            Shoot shoot = new Shoot(currentDamage);
-            getWorld().addObject(shoot, getX(), getY());
-            shoot.setRotation(this.getRotation());
+            CannonBall cannonBall = new CannonBall(currentDamage);
+            getWorld().addObject(cannonBall, getX(), getY());
+            cannonBall.setRotation(this.getRotation());
         }
     }
     
     public void upgrading()
     {
-        infoContainer = upgrade(this, level1, level2, level3,
+        levelContainer = upgrade(this, level1, level2, level3,
         currentImage, damageLevel2, damageLevel3, level2Cost, level3Cost);
-        if (infoContainer != null)
+        if (levelContainer != null)
         {
-            currentImage = infoContainer.currentImage;
+            currentImage = levelContainer.currentImage;
             setImage(currentImage);
-            currentDamage = infoContainer.damageLevel;
+            currentDamage = levelContainer.damageLevel;
         }
     }
 

@@ -19,7 +19,7 @@ public class ShootingTower extends Tower
     private int damageLevel3 = 8;
     private int level2Cost = 50;
     private int level3Cost = 100;
-    private InfoContainer infoContainer;
+    private LevelContainer levelContainer;
     /*public ShootingTower()
     {
         startPosition(startPosition, this);
@@ -59,13 +59,13 @@ public class ShootingTower extends Tower
     
     public void upgrading()
     {
-        infoContainer = upgrade(this, level1, level2, level3,
+        levelContainer = upgrade(this, level1, level2, level3,
         currentImage, damageLevel2, damageLevel3, level2Cost, level3Cost);
-        if (infoContainer != null)
+        if (levelContainer != null)
         {
-            currentImage = infoContainer.currentImage;
+            currentImage = levelContainer.currentImage;
             setImage(currentImage);
-            currentDamage = infoContainer.damageLevel;
+            currentDamage = levelContainer.damageLevel;
         }
     }
 

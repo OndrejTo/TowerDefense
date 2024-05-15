@@ -6,11 +6,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class InfoContainer extends Actor
+public class LevelContainer extends Actor
 {
     public GreenfootImage currentImage;
     public int damageLevel;
-    public InfoContainer(GreenfootImage currentImage, int damageLevel)
+    public LevelContainer(GreenfootImage currentImage, int damageLevel)
     {
         this.currentImage = currentImage;
         this.damageLevel = damageLevel;

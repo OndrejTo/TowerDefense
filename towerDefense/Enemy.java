@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Enemy extends Actor
 {
-    private int lifes = 100;
+    
     /**
      * Act - do whatever the Enemy wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,15 +18,26 @@ public class Enemy extends Actor
         // Add your action code here.
     }
     
-    public int colision()
+    public DamageContainer colision(Enemy enemy, FireBall lastFireBall)
     {
         Shoot shoot = (Shoot) getOneIntersectingObject(Shoot.class);
         if(shoot != null)
         {
             removeTouching(Shoot.class);
-            return shoot.getDamage();
+            return new DamageContainer(shoot.getDamage(), null);
         }
-        return 0;
+        FireBall fireBall = (FireBall) getOneIntersectingObject(FireBall.class);
+        if(fireBall != null && fireBall != lastFireBall)
+        {
+           return new DamageContainer(fireBall.getDamage(), fireBall); 
+        }
+        Actor meteorite = getOneIntersectingObject(Meteorite.class);
+        if(meteorite != null)
+        {
+            removeTouching(Meteorite.class);
+            return new DamageContainer(50, null);
+        }
+        return null;
     }
     
     public void destruction(Enemy enemy, int lifes, int minReward, int maxReward)

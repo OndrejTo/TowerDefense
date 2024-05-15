@@ -7,5 +7,5 @@ comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Tower\ wants\ to\ do.\ This\ meth
 comment2.params=tower
 comment2.target=boolean\ start(Tower)
 comment3.params=tower\ level1\ level2\ level3\ currentImage\ damageLevel2\ damageLevel3\ level2Cost\ level3Cost
-comment3.target=InfoContainer\ upgrade(Tower,\ greenfoot.GreenfootImage,\ greenfoot.GreenfootImage,\ greenfoot.GreenfootImage,\ greenfoot.GreenfootImage,\ int,\ int,\ int,\ int)
+comment3.target=LevelContainer\ upgrade(Tower,\ greenfoot.GreenfootImage,\ greenfoot.GreenfootImage,\ greenfoot.GreenfootImage,\ greenfoot.GreenfootImage,\ int,\ int,\ int,\ int)
 numComments=4
