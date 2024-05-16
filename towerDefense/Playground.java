@@ -11,6 +11,7 @@ public class Playground extends World
     public int coins = 1000;
     private int meteoriteCounter = 450;
     private boolean startMeteoriteAtack;
+    private int timer = 3600;
     public Playground()
     {    
         super(1200, 700, 1); 
@@ -18,6 +19,7 @@ public class Playground extends World
     
     public void act()
     {
+        timer++;
         if(startMeteoriteAtack)
         {
             if(meteoriteCounter % 30 == 0 )
@@ -25,6 +27,7 @@ public class Playground extends World
                 addObject(new Meteorite(), Greenfoot.getRandomNumber(getWidth()-100)+50, 1);
             }
             meteoriteCounter--;
+        
             if(meteoriteCounter == 0)
             {
                 startMeteoriteAtack = false;
@@ -60,10 +63,14 @@ public class Playground extends World
     
     public void meteoritAtack(MeteoriteIcon meteoriteIcon)
     {
-        if(coins >= 150 && meteoriteCounter > 0)
+        if(timer >= 3600)
         {
-            coins -= 150;
-            startMeteoriteAtack = true;
+            timer = 0;
+            if(coins >= 150 && meteoriteCounter > 0)
+            {
+                coins -= 150;
+                startMeteoriteAtack = true;
+            }
         }
     }
 }
