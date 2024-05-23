@@ -11,4 +11,6 @@ comment4.params=tower\ cost
 comment4.target=boolean\ towerWasUpgrated(Tower,\ int)
 comment5.params=meteoriteIcon
 comment5.target=void\ meteoritAtack(MeteoriteIcon)
-numComments=6
+comment6.params=
+comment6.target=void\ glueAtack()
+numComments=7

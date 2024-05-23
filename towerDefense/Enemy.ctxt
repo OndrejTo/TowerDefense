@@ -8,4 +8,6 @@ comment2.params=enemy\ lastFireBall
 comment2.target=DamageContainer\ colision(Enemy,\ FireBall)
 comment3.params=enemy\ lifes\ minReward\ maxReward
 comment3.target=void\ destruction(Enemy,\ int,\ int,\ int)
-numComments=4
+comment4.params=enemy\ turn
+comment4.target=int\ pathFinder(Enemy,\ int)
+numComments=5

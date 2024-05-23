@@ -14,6 +14,10 @@ public class GlueIcon extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        MouseInfo mi = Greenfoot.getMouseInfo();
+        if(mi != null && Greenfoot.mouseClicked(this))
+        {
+            ((Playground) getWorld()).glueAtack();
+        }
     }
 }

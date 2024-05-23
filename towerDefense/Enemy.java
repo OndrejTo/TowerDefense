@@ -48,4 +48,45 @@ public class Enemy extends Actor
             getWorld().removeObject(enemy);
         }
     }
+    
+    public int pathFinder(Enemy enemy, int turn)
+    {
+        if(enemy.getX() >= 200 && turn==0)
+        {
+            enemy.turn(-90);
+            turn++;
+            return turn;
+        }
+        if(enemy.getX() >= 200 && enemy.getY() <= 180 && turn==1)
+        {
+            enemy.turn(90);
+            turn++;
+            return turn;
+        }
+        if(enemy.getX() >= 437 && enemy.getY() <= 180 && turn==2)
+        {
+            enemy.turn(90);
+            turn++;
+            return turn;
+        }
+        if(enemy.getX() >= 437 && enemy.getY() >= 444 && turn==3)
+        {
+            enemy.turn(-90);
+            turn++;
+            return turn;
+        }
+        if(enemy.getX() >= 754 && enemy.getY() >= 444 && turn==4)
+        {
+            enemy.turn(-90);
+            turn++;
+            return turn;
+        }
+        if(enemy.getX() >= 754 && enemy.getY() <= 320 && turn==5)
+        {
+            enemy.turn(90);
+            turn++;
+            return turn;
+        }
+        return turn;
+    }
 }

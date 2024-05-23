@@ -12,8 +12,11 @@ public class BlueEnemy extends Enemy
     private int minReward = 2;
     private int maxReward = 4;
     private FireBall lastFireBall;
+    private int turn = 0;
     public void act()
     {
+        move(3);
+        turn = pathFinder(this, turn);
         MouseInfo mi = Greenfoot.getMouseInfo();
         if (mi != null)
         {
