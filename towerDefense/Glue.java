@@ -7,20 +7,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Glue extends Actor
 {
+    private int timer;
     /**
      * Act - do whatever the Glue wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act()
     {
-        if(isTouching(null))
+        timer++;
+        if(timer == 120)
         {
-            slowdown();
+            getWorld().removeObject(this);
         }
-    }
-    
-    public void slowdown()
-    {
-        
     }
 }

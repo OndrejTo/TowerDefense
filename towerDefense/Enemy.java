@@ -89,4 +89,23 @@ public class Enemy extends Actor
         }
         return turn;
     }
+    
+    public int slowdown(int speed)
+    {
+        if(isTouching(Glue.class))
+        {
+            speed = 0;
+        }
+        return speed;
+    }
+    
+    public int damage(Enemy enemy, int damage)
+    {
+        if (enemy.isAtEdge())
+        {
+            Playground.lives = Playground.lives-damage;
+            getWorld().removeObject(enemy);
+        }
+        return Playground.lives;
+    }
 }

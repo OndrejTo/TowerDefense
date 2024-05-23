@@ -13,15 +13,11 @@ public class BlueEnemy extends Enemy
     private int maxReward = 4;
     private FireBall lastFireBall;
     private int turn = 0;
+    private int damage = 1;
     public void act()
     {
         move(3);
         turn = pathFinder(this, turn);
-        MouseInfo mi = Greenfoot.getMouseInfo();
-        if (mi != null)
-        {
-            setLocation(mi.getX(), mi.getY());
-        }
         DamageContainer damageContainer = colision(this, lastFireBall);
         if (damageContainer != null)
         {
@@ -29,5 +25,6 @@ public class BlueEnemy extends Enemy
             lastFireBall = damageContainer.lastFireBall;
         }
         destruction(this, lifes, minReward, maxReward);
+        damage(this, damage);
     }
 }

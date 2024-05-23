@@ -13,21 +13,18 @@ public class RedEnemy extends Enemy
     private int maxReward = 3;
     private FireBall lastFireBall;
     private int turn = 0;
+    private int damage = 1;
     public void act()
     {
         move(3);
         turn = pathFinder(this, turn);
-        MouseInfo mi = Greenfoot.getMouseInfo();
-        if (mi != null)
-        {
-            setLocation(mi.getX(), mi.getY());
-        }
         DamageContainer damageContainer = colision(this, lastFireBall);
         if (damageContainer != null)
         {
             lifes -= damageContainer.damage;
             lastFireBall = damageContainer.lastFireBall;
         }
+        damage(this, damage);
         destruction(this, lifes, minReward, maxReward);
     }
 }

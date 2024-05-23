@@ -13,15 +13,13 @@ public class Airship extends Enemy
     private int maxReward = 20;
     private FireBall lastFireBall;
     private int turn = 0;
+    private int speed = 1;
+    private int damage = 5;
     public void act()
     {
-        move(3);
+        speed = slowdown(speed);
+        move(speed);
         turn = pathFinder(this, turn);
-        MouseInfo mi = Greenfoot.getMouseInfo();
-        if (mi != null)
-        {
-            setLocation(mi.getX(), mi.getY());
-        }
         DamageContainer damageContainer = colision(this, lastFireBall);
         if (damageContainer != null)
         {
@@ -29,5 +27,6 @@ public class Airship extends Enemy
             lastFireBall = damageContainer.lastFireBall;
         }
         destruction(this, lifes, minReward, maxReward);
+        damage(this, damage);
     }
 }

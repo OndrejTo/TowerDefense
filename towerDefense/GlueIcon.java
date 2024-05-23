@@ -17,7 +17,8 @@ public class GlueIcon extends Actor
         MouseInfo mi = Greenfoot.getMouseInfo();
         if(mi != null && Greenfoot.mouseClicked(this))
         {
-            ((Playground) getWorld()).glueAtack();
+            ((Playground) getWorld()).glueAtack(this);
+            getWorld().addObject(new GlueSelect(), mi.getX(), mi.getY());
         }
     }
 }
