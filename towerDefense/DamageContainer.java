@@ -10,10 +10,12 @@ public class DamageContainer extends Actor
 {
     public int damage;
     public FireBall lastFireBall;
-    public DamageContainer(int damage, FireBall lastFireBall)
+    public ElectricArea lastElectricArea;
+    public DamageContainer(int damage, FireBall lastFireBall, ElectricArea lastElectricArea)
     {
         this.damage = damage;
         this.lastFireBall = lastFireBall;
+        this.lastElectricArea = lastElectricArea;
     }
     
     public void act()

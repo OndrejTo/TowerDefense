@@ -12,6 +12,7 @@ public class Airship extends Enemy
     private int minReward = 10;
     private int maxReward = 20;
     private FireBall lastFireBall;
+    private ElectricArea lastElectricArea;
     private int turn = 0;
     private int speed = 1;
     private int damage = 5;
@@ -20,13 +21,14 @@ public class Airship extends Enemy
         speed = slowdown(speed);
         move(speed);
         turn = pathFinder(this, turn);
-        DamageContainer damageContainer = colision(this, lastFireBall);
+        DamageContainer damageContainer = colision(this, lastFireBall, lastElectricArea);
         if (damageContainer != null)
         {
             lifes -= damageContainer.damage;
             lastFireBall = damageContainer.lastFireBall;
+            lastElectricArea = damageContainer.lastElectricArea;
         }
-        destruction(this, lifes, minReward, maxReward);
         damage(this, damage);
+        destruction(this, lifes, minReward, maxReward);
     }
 }

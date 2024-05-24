@@ -23,7 +23,7 @@ public class Playground extends World
         showText("coins:"+coins, 1125, 650);
         showText("Lives: "+lives, 1125, 600);
         addObject(new GlueIcon(), 1000, 600);
-        addObject(new MeteoriteIcon(), 1000, 550);
+        addObject(new MeteoriteIcon(), 1000, 700);
         addObject(new SpawnPlace(), 72, 288);
         addObject(new SpawnPlace(), 320, 288);
         addObject(new SpawnPlace(), 610, 288);
@@ -68,6 +68,13 @@ public class Playground extends World
             timer = 0;
             addObject(new MeteoriteIcon(), 1000, 550);
         }
+        if (lives <= 0)
+        {
+            showText("Game Over!!!!!", getWidth()/2, getHeight()/2);
+            lives = 0;
+            Greenfoot.stop();
+        }
+        
     }
 
     public void towerWasCreated(Tower tower, int cost)
@@ -100,6 +107,7 @@ public class Playground extends World
         if(timer >= 3600)
         {
             timer = 0;
+            System.out.println("Test");
             if(coins >= 150 && meteoriteCounter > 0)
             {
                 coins -= 150;

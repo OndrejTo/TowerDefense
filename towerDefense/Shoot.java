@@ -16,7 +16,7 @@ public class Shoot extends Actor
     
     public void act()
     {
-        move(3);
+        move(7);
         colision();
     }
     

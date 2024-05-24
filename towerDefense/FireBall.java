@@ -21,7 +21,7 @@ public class FireBall extends Actor
         {
             getWorld().removeObject(this);
         }
-        counter --;
+        counter--;
     }
     
     public int getDamage()

@@ -46,7 +46,18 @@ public class ElectricTower extends Tower
         if (cooldown == 0)
         {
             cooldown = 300;
-            getWorld().addObject(new ElectricArea(currentDamage, 400), getX(), getY());
+            if (currentImage == level1)
+            {
+                getWorld().addObject(new ElectricArea(currentDamage, 400), getX(), getY());
+            }
+            if (currentImage == level2)
+            {
+                getWorld().addObject(new ElectricArea(damageLevel2, 600), getX(), getY());
+            }
+            if (currentImage == level3)
+            {
+                getWorld().addObject(new ElectricArea(damageLevel3, 800), getX(), getY());
+            }
         }
     }
 

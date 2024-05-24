@@ -12,17 +12,21 @@ public class RedEnemy extends Enemy
     private int minReward = 1;
     private int maxReward = 3;
     private FireBall lastFireBall;
+    private ElectricArea lastElectricArea;
     private int turn = 0;
     private int damage = 1;
+    private int speed = 1;
     public void act()
     {
-        move(3);
+        speed = slowdown(speed);
+        move(speed);
         turn = pathFinder(this, turn);
-        DamageContainer damageContainer = colision(this, lastFireBall);
+        DamageContainer damageContainer = colision(this, lastFireBall, lastElectricArea);
         if (damageContainer != null)
         {
             lifes -= damageContainer.damage;
             lastFireBall = damageContainer.lastFireBall;
+            lastElectricArea = damageContainer.lastElectricArea;
         }
         damage(this, damage);
         destruction(this, lifes, minReward, maxReward);

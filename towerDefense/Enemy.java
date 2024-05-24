@@ -18,24 +18,29 @@ public class Enemy extends Actor
         // Add your action code here.
     }
     
-    public DamageContainer colision(Enemy enemy, FireBall lastFireBall)
+    public DamageContainer colision(Enemy enemy, FireBall lastFireBall, ElectricArea lastElectricArea)
     {
         Shoot shoot = (Shoot) getOneIntersectingObject(Shoot.class);
         if(shoot != null)
         {
             removeTouching(Shoot.class);
-            return new DamageContainer(shoot.getDamage(), null);
+            return new DamageContainer(shoot.getDamage(), null, null);
         }
         FireBall fireBall = (FireBall) getOneIntersectingObject(FireBall.class);
         if(fireBall != null && fireBall != lastFireBall)
         {
-           return new DamageContainer(fireBall.getDamage(), fireBall); 
+           return new DamageContainer(fireBall.getDamage(), fireBall, null); 
         }
         Actor meteorite = getOneIntersectingObject(Meteorite.class);
         if(meteorite != null)
         {
             removeTouching(Meteorite.class);
-            return new DamageContainer(50, null);
+            return new DamageContainer(50, null, null);
+        }
+        ElectricArea electricArea = (ElectricArea) getOneIntersectingObject(ElectricArea.class);
+        if(electricArea != null && electricArea != lastElectricArea)
+        {
+           return new DamageContainer(electricArea.getDamage(), null, electricArea); 
         }
         return null;
     }
