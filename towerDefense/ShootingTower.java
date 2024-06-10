@@ -17,24 +17,18 @@ public class ShootingTower extends Tower
     private int currentDamage = 3;
     private int damageLevel2 = 5;
     private int damageLevel3 = 8;
+    private int level1Cost = 35;
     private int level2Cost = 50;
     private int level3Cost = 100;
     private LevelContainer levelContainer;
-    /*public ShootingTower()
-    {
-        startPosition(startPosition, this);
-    }*/
-
     public void act()
     {
         if(startPosition)
         {
-            startPosition = start(this);
+            startPosition = start(this, level1Cost);
         }
         
         if(getWorld() != null)
-        // pokud by oběkt nebyl na spawnplacu tak by další kód po remove... 
-        // spustil error protože by se aktér nenacházel ve světě
         {
             shooting();
             upgrading();

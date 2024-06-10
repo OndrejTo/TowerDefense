@@ -9,23 +9,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Tower extends Actor
 {
     private boolean continueUpgrade;
-    /**
-     * Act - do whatever the Tower wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public void act()
-    {
-
-    }
-    
-    public boolean start(Tower tower)
+    public boolean start(Tower tower, int cost)
     {
         SpawnPlace spawnPlace = (SpawnPlace) tower.getOneIntersectingObject(SpawnPlace.class);
         if(spawnPlace != null && spawnPlace.isEmpty)
         {
             spawnPlace.isEmpty = false;
             tower.setLocation(spawnPlace.getX(), spawnPlace.getY());
-            ((Playground) getWorld()).towerWasCreated(tower, 35);
+            ((Playground) getWorld()).towerWasCreated(tower, cost);
         }
         else
         {

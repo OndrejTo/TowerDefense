@@ -8,32 +8,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ElectricTower extends Tower
 {
-    public boolean startPosition = true;
-    private int cooldown = 300;
+    private boolean startPosition = true;
+    private int cooldown = 180;
     GreenfootImage level1 = new GreenfootImage("ElectricTowerLevel1.png");
     GreenfootImage level2 = new GreenfootImage("ElectricTowerLevel2.png");
     GreenfootImage level3 = new GreenfootImage("ElectricTowerLevel3.png");
     GreenfootImage currentImage = level1;
-    public static int currentDamage = 4;
-    public static int damageLevel2 = 8;
-    public static int damageLevel3 = 12;
+    public static int currentDamage = 2;
+    public static int damageLevel2 = 4;
+    public static int damageLevel3 = 8;
+    private int level1Cost = 75;
     private int level2Cost = 125;
     private int level3Cost = 200;
     private LevelContainer levelContainer;
-    /**
-     * Act - do whatever the ElectricTower wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
     {
         if(startPosition)
         {
-            startPosition = start(this);
+            startPosition = start(this, level1Cost);
         }
 
         if(getWorld() != null)
-        // pokud by oběkt nebyl na spawnplacu tak by další kód po remove... 
-        // spustil error protože by se aktér nenacházel ve světě
         {
             shooting();
             upgrading();
@@ -45,18 +40,18 @@ public class ElectricTower extends Tower
         cooldown--;
         if (cooldown == 0)
         {
-            cooldown = 300;
+            cooldown = 180;
             if (currentImage == level1)
             {
-                getWorld().addObject(new ElectricArea(currentDamage, 400), getX(), getY());
+                getWorld().addObject(new ElectricArea(currentDamage, 300), getX(), getY());
             }
             if (currentImage == level2)
             {
-                getWorld().addObject(new ElectricArea(damageLevel2, 600), getX(), getY());
+                getWorld().addObject(new ElectricArea(damageLevel2, 400), getX(), getY());
             }
             if (currentImage == level3)
             {
-                getWorld().addObject(new ElectricArea(damageLevel3, 800), getX(), getY());
+                getWorld().addObject(new ElectricArea(damageLevel3, 600), getX(), getY());
             }
         }
     }

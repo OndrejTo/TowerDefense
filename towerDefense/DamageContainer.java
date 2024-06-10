@@ -17,9 +17,4 @@ public class DamageContainer extends Actor
         this.lastFireBall = lastFireBall;
         this.lastElectricArea = lastElectricArea;
     }
-    
-    public void act()
-    {
-        // Add your action code here.
-    }
 }

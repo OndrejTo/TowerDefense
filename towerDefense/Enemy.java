@@ -35,7 +35,7 @@ public class Enemy extends Actor
         if(meteorite != null)
         {
             removeTouching(Meteorite.class);
-            return new DamageContainer(50, null, null);
+            return new DamageContainer(100, null, null);
         }
         ElectricArea electricArea = (ElectricArea) getOneIntersectingObject(ElectricArea.class);
         if(electricArea != null && electricArea != lastElectricArea)
@@ -45,11 +45,11 @@ public class Enemy extends Actor
         return null;
     }
     
-    public void destruction(Enemy enemy, int lifes, int minReward, int maxReward)
+    public void destruction(Enemy enemy, int lives, int minReward, int maxReward)
     {
-        if(lifes<=0)
+        if(lives<=0)
         {
-            ((Playground) getWorld()).coins += (Greenfoot.getRandomNumber(maxReward-minReward+1)+minReward);
+            ((Playground) getWorld()).coinsControl(Greenfoot.getRandomNumber(maxReward-minReward+1)+minReward);
             getWorld().removeObject(enemy);
         }
     }
@@ -95,22 +95,21 @@ public class Enemy extends Actor
         return turn;
     }
     
-    public int slowdown(int speed)
+    public int slowdown(int initialSpeed)
     {
         if(isTouching(Glue.class))
         {
-            speed = 0;
+            return 0;
         }
-        return speed;
+        return initialSpeed;
     }
     
-    public int damage(Enemy enemy, int damage)
+    public void damage(Enemy enemy, int damage)
     {
         if (enemy.isAtEdge())
         {
-            Playground.lives = Playground.lives-damage;
+            ((Playground) getWorld()).livesControl(damage);
             getWorld().removeObject(enemy);
         }
-        return Playground.lives;
     }
 }

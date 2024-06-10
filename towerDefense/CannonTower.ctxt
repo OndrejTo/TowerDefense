@@ -3,7 +3,6 @@ comment0.target=CannonTower
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ CannonTower\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=void\ act()
-comment1.text=public\ ShootingTower()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ startPosition(startPosition,\ this);\r\n}
 comment2.params=
 comment2.target=void\ shooting()
 comment3.params=
