@@ -15,7 +15,7 @@ public class Glue extends Actor
     public void act()
     {
         timer++;
-        if(timer == 120)
+        if(timer == 240)
         {
             getWorld().removeObject(this);
         }

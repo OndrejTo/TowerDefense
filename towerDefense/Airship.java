@@ -8,27 +8,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Airship extends Enemy
 {
-    private int lifes = 100;
+    private int lives = 100;
     private int minReward = 10;
     private int maxReward = 20;
     private FireBall lastFireBall;
     private ElectricArea lastElectricArea;
     private int turn = 0;
-    private int speed = 1;
-    private int damage = 5;
+    private int initialSpeed = 1;
+    private int speed = initialSpeed;
+    private int damage = 5; 
     public void act()
     {
-        speed = slowdown(speed);
         move(speed);
         turn = pathFinder(this, turn);
+        speed = slowdown(initialSpeed);
         DamageContainer damageContainer = colision(this, lastFireBall, lastElectricArea);
         if (damageContainer != null)
         {
-            lifes -= damageContainer.damage;
+            lives -= damageContainer.damage;
             lastFireBall = damageContainer.lastFireBall;
             lastElectricArea = damageContainer.lastElectricArea;
         }
         damage(this, damage);
-        destruction(this, lifes, minReward, maxReward);
+        destruction(this, lives, minReward, maxReward);
     }
 }

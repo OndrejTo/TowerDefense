@@ -15,10 +15,11 @@ public class GlueIcon extends Actor
     public void act()
     {
         MouseInfo mi = Greenfoot.getMouseInfo();
-        if(mi != null && Greenfoot.mouseClicked(this))
+        if(mi != null && Greenfoot.mouseClicked(this) && ((Playground)getWorld()).coins >= 75)
         {
             ((Playground) getWorld()).glueAtack(this);
             getWorld().addObject(new GlueSelect(), mi.getX(), mi.getY());
+            getWorld().removeObject(this);
         }
     }
 }

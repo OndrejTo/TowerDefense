@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class CannonBall extends Actor
 {
     public int damage;
+    private int timer = 90;
     public CannonBall(int damage)
     {
         this.damage = damage;
@@ -16,12 +17,17 @@ public class CannonBall extends Actor
     
     public void act()
     {
+    
         move(6);
         hit();
         if(getWorld() != null)
         {
-            
             colision();
+        }
+        timer --;
+        if (timer ==0)
+        {
+            getWorld().removeObject(this);
         }
     }
     

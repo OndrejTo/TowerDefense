@@ -17,24 +17,18 @@ public class CannonTower extends Tower
     private int currentDamage = 3;
     private int damageLevel2 = 5;
     private int damageLevel3 = 10;
+    private int level1Cost = 50;
     private int level2Cost = 100;
     private int level3Cost = 150;
     private LevelContainer levelContainer;
-    /*public ShootingTower()
-    {
-        startPosition(startPosition, this);
-    }*/
-
     public void act()
     {
         if(startPosition)
         {
-            startPosition = start(this);
+            startPosition = start(this, level1Cost);
         }
         
         if(getWorld() != null)
-        // pokud by oběkt nebyl na spawnplacu tak by další kód po remove... 
-        // spustil error protože by se aktér nenacházel ve světě
         {
             shooting();
             upgrading();
@@ -49,7 +43,8 @@ public class CannonTower extends Tower
             turnTowards(enemy.getX(), enemy.getY());
         }
         cooldown--;
-        if (!getWorld().getObjects(Enemy.class).isEmpty() && cooldown <= 0) {
+        if (!getWorld().getObjects(Enemy.class).isEmpty() && cooldown <= 0) 
+        {
             cooldown = 60;
             CannonBall cannonBall = new CannonBall(currentDamage);
             getWorld().addObject(cannonBall, getX(), getY());

@@ -8,16 +8,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MeteoriteIcon extends Actor
 {
-    /**
-     * Act - do whatever the MeteoritIcon wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     public void act()
     {
         MouseInfo mi = Greenfoot.getMouseInfo();
-        if(mi != null && Greenfoot.mouseClicked(this))
+        if(mi != null && Greenfoot.mouseClicked(this)&&((Playground)getWorld()).coins >= 150)
         {
-            ((Playground) getWorld()).meteoritAtack(this);
+            ((Playground) getWorld()).meteoriteAtack();
+            getWorld().removeObject(this);
         }
     }
 }

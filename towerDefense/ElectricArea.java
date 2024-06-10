@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ElectricArea extends Actor
 {
     private int damage;
-    private int cooldown = 60;
+    private int cooldown = 30;
     public ElectricArea(int damage, int size)
     {
         this.damage = damage;
@@ -21,8 +21,6 @@ public class ElectricArea extends Actor
         cooldown--;
         if (cooldown == 0) 
         {
-            cooldown = 60;
-            
             getWorld().removeObject(this);
         }
     }
