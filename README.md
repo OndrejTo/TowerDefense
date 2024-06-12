@@ -37,11 +37,11 @@ Obranné věže jsou klíčovými prvky ve hře, které můžeme umísťovat na 
 
 	Tato věž má malé poškození (zabije jen jednoho nepřátele), ale má rychlou palbu (střílí jednou za 30 kol) a je velmi účinná proti slabším nepřátelům. Je vhodná k útoku na zbytky nepřátelských jednotek na konci mapy. Na pořízení této věže potřebujeme 35 mincí.
 
-	| Úroveň | Cena vylepšení | Poškození | Rozsah | Kadence |
-	|:-:|:-:|:-:|:-:|:-:|
-	| 1 | 35 | 3 | 50 px | 1/30 kol |
-	| 2 | 50 | 5 | 75 px | 1/30 kol |
-	| 3 | 100 | 8 | 100 px | 1/30 kol |
+	| Úroveň | Cena vylepšení | Poškození | Kadence |
+	|:-:|:-:|:-:|:-:|
+	| 1 | 35 | 3 | 1/30 kol |
+	| 2 | 100 | 5 | 1/30 kol |
+	| 3 | 150 | 8 | 1/30 kol |
 
 - **Dělo**  
 	
@@ -49,11 +49,11 @@ Obranné věže jsou klíčovými prvky ve hře, které můžeme umísťovat na 
 	
 	Dělo je specializováno na ničení skupin nepřátel a obranu proti větším hrozbám. Systém dělových koulí může způsobit rozsáhlé poškození většímu množství nepřátelských jednotek najednou. Na pořízení této věže potřebujeme 50 mincí.
 
-	| Úroveň | Cena vylepšení | Poškození | Rozsah | Kadence |
-	|:-:|:-:|:-:|:-:|:-:|
-	| 1 | 50 | 3 | 40 px | 1/60 kol |
-	| 2 | 100 | 5 | 60 px | 1/60 kol  |
-	| 3 | 150 | 10 | 80 px | 1/60 kol  |
+	| Úroveň | Cena vylepšení | Poškození | Kadence |
+	|:-:|:-:|:-:|:-:|
+	| 1 | 50 | 3 | 1/60 kol |
+	| 2 | 150 | 6 | 1/60 kol |
+	| 3 | 250 | 9 | 1/60 kol |
 
 - **Elektrická věž**  
 
@@ -63,9 +63,9 @@ Obranné věže jsou klíčovými prvky ve hře, které můžeme umísťovat na 
 
 	| Úroveň | Cena vylepšení | Poškození | Působiště |
 	|:-:|:-:|:-:|:-:|
-	| 1 | 75 | 4/s | 50 px | 
-	| 2 | 125 | 8/s | 75 px |
-	| 3 | 200 | 12/s | 100 px |
+	| 1 | 75 | 2/s | 300 px | 
+	| 2 | 200 | 4/s | 400 px |
+	| 3 | 350 | 8/s | 600 px |
 	
 
 ### Nepřátelské jednotky
