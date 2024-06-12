@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Prices extends Actor
 {
     private String cena;
+    private int size;
     /**
      * Act - do whatever the Prices wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,9 +19,10 @@ public class Prices extends Actor
         // Add your action code here.
         
     }
-    public Prices(String cena)
+    public Prices(String cena, int size)
     {
         this.cena = cena;
-        setImage(new GreenfootImage(cena, 20, Color.WHITE, Color.BLACK));
+        this.size = size;
+        setImage(new GreenfootImage(cena, size, Color.WHITE, Color.BLACK));
     }
 }

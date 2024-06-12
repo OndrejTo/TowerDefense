@@ -49,12 +49,12 @@ public class Playground extends World
         addObject(new SpawnPlace(), 610, 575);
         addObject(new SpawnPlace(), 1100, 200);
         addObject(new SpawnPlace(), 900, 440);
-        addObject(new Prices("35"), 148, 675);
-        addObject(new Prices("50"), 210, 675);
-        addObject(new Prices("75"), 270, 675);
+        addObject(new Prices("35",20), 148, 675);
+        addObject(new Prices("50",20), 210, 675);
+        addObject(new Prices("75",20), 270, 675);
         //addObject(new Prices("x"), 330, 675);
-        addObject(new Prices("75"), 900, 603);
-        addObject(new Prices("150"), 900, 650);
+        addObject(new Prices("75",20), 900, 603);
+        addObject(new Prices("150",20), 900, 650);
     }
 
     public void act()
@@ -189,8 +189,9 @@ public class Playground extends World
         if (lives <= 0)
         {
             livesLabel.reduceLives(0);
-            Greenfoot.delay(180);
-            showText("Konec", getWidth()/2, getHeight()/2);
+            addObject(new Prices("KONEC HRY", 200), getWidth()/2, getHeight()/2);
+            addObject(new Prices("Hra se restartuje za 5 sekund...", 50), getWidth()/2, getHeight()/2+200); 
+            Greenfoot.delay(300);
             Greenfoot.setWorld(new Playground());
         }
     }
