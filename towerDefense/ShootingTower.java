@@ -18,8 +18,8 @@ public class ShootingTower extends Tower
     private int damageLevel2 = 5;
     private int damageLevel3 = 8;
     private int level1Cost = 35;
-    private int level2Cost = 50;
-    private int level3Cost = 100;
+    private int level2Cost = 100;
+    private int level3Cost = 150;
     private LevelContainer levelContainer;
     public void act()
     {

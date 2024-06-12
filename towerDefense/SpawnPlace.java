@@ -28,5 +28,10 @@ public class SpawnPlace extends Actor
         {
             getWorld().removeObject(this);
         }
+        
+        if(!isTouching(Tower.class))
+        {
+            isEmpty = true;
+        }
     }
 }

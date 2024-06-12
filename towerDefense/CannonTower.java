@@ -15,11 +15,11 @@ public class CannonTower extends Tower
     GreenfootImage level3 = new GreenfootImage("CannonLevel3.png");
     GreenfootImage currentImage = level1;
     private int currentDamage = 3;
-    private int damageLevel2 = 5;
-    private int damageLevel3 = 10;
+    private int damageLevel2 = 6;
+    private int damageLevel3 = 9;
     private int level1Cost = 50;
-    private int level2Cost = 100;
-    private int level3Cost = 150;
+    private int level2Cost = 150;
+    private int level3Cost = 250;
     private LevelContainer levelContainer;
     public void act()
     {

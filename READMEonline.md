@@ -125,7 +125,7 @@ a finanční požadavek (pro aktivace schopnosti je potřeba uhradit předem sta
 
 - **Padající meteority**  
 
-	![](Zhttps://raw.githubusercontent.com/OndrejTo/TowerDefense/main/ZadaniObrazky/Meteorite.png)
+	![](https://raw.githubusercontent.com/OndrejTo/TowerDefense/main/ZadaniObrazky/Meteorite.png)
 
 	Spustí se vlna 15 padajících meteoritů pohybujících se vertikálně od horního okraje rychlostí 3 pixely za jeden krok.
 Pokud se některý z meteoritů dotkne nepřítele, sebere mu 50 životů a zmizí. 

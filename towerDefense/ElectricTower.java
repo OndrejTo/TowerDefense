@@ -18,8 +18,8 @@ public class ElectricTower extends Tower
     public static int damageLevel2 = 4;
     public static int damageLevel3 = 8;
     private int level1Cost = 75;
-    private int level2Cost = 125;
-    private int level3Cost = 200;
+    private int level2Cost = 200;
+    private int level3Cost = 350;
     private LevelContainer levelContainer;
     public void act()
     {

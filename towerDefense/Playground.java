@@ -34,6 +34,11 @@ public class Playground extends World
         super(1200, 700, 1);
         addObject(new GlueIcon(), 950, 600);
         addObject(new MeteoriteIcon(), 950, 650);
+        addObject(new ShootingTowerIcon(), 150, 625);
+        addObject(new CannonTowerIcon(), 210, 625);
+        addObject(new ElectricTowerIcon(), 270, 625);
+        addObject(new WrenchIcon(), 330, 625);
+        addObject(new RemoveIcon(), 80, 625);
         
         addObject(livesLabel, 1100, 600);
         addObject(coinsLabel, 1100, 650);
@@ -44,6 +49,12 @@ public class Playground extends World
         addObject(new SpawnPlace(), 610, 575);
         addObject(new SpawnPlace(), 1100, 200);
         addObject(new SpawnPlace(), 900, 440);
+        addObject(new Prices("35"), 148, 675);
+        addObject(new Prices("50"), 210, 675);
+        addObject(new Prices("75"), 270, 675);
+        //addObject(new Prices("x"), 330, 675);
+        addObject(new Prices("75"), 900, 603);
+        addObject(new Prices("150"), 900, 650);
     }
 
     public void act()
@@ -123,7 +134,7 @@ public class Playground extends World
         }
     }
 
-    public void glueAtack(GlueIcon glueIcon)
+    public void glueAtack()
     {
         if(startGlueAtack == false)
         {
@@ -153,19 +164,19 @@ public class Playground extends World
             addObject(new Airship(), 50, 380);
         }
         
-        if(spawnTimer == 10800 || spawnTimer == 21600)
+        if(spawnTimer == 10800 || spawnTimer == 21600 || spawnTimer == 50400)
         {
             redF -= 30;
         }
-        if(spawnTimer == 14400 || spawnTimer == 28800)
+        if(spawnTimer == 14400 || spawnTimer == 28800 || spawnTimer == 57600)
         {
             blueF -= 60;
         }
-        if(spawnTimer == 18000 || spawnTimer == 36000)
+        if(spawnTimer == 18000 || spawnTimer == 36000 || spawnTimer == 64800)
         {
             pinkF -= 75;
         }
-        if(spawnTimer == 21600 || spawnTimer == 43200)
+        if(spawnTimer == 21600 || spawnTimer == 43200 || spawnTimer == 72000)
         {
             airF -= 150;
         }

@@ -17,17 +17,19 @@ public class CannonBall extends Actor
     
     public void act()
     {
-    
         move(6);
-        hit();
-        if(getWorld() != null)
-        {
-            colision();
-        }
         timer --;
-        if (timer ==0)
+        if (timer == 0)
         {
             getWorld().removeObject(this);
+        }
+        if (getWorld() != null)
+        {
+            hit();
+        }
+        if (getWorld() != null)
+        {
+            colision();
         }
     }
     

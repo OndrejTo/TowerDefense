@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GlueIcon extends Actor
+public class GlueIcon extends Icon
 {
     /**
      * Act - do whatever the GlueIcon wants to do. This method is called whenever
@@ -17,7 +17,7 @@ public class GlueIcon extends Actor
         MouseInfo mi = Greenfoot.getMouseInfo();
         if(mi != null && Greenfoot.mouseClicked(this) && ((Playground)getWorld()).coins >= 75)
         {
-            ((Playground) getWorld()).glueAtack(this);
+            ((Playground) getWorld()).glueAtack();
             getWorld().addObject(new GlueSelect(), mi.getX(), mi.getY());
             getWorld().removeObject(this);
         }
