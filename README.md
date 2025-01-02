@@ -4,12 +4,6 @@
 
 ## Autoři
 
-- **Ondřej Tomašťík**
-- **Marek Reich**
-- **Oliver Šesták**
-
-*Tato hra vznikla jako projekt v rámci Programování I. na Obchodní akademii Uherské Hradiště.*
-
 ---
 
 ## Téma
